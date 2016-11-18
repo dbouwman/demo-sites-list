@@ -1,0 +1,13 @@
+<div class="row" style="padding-bottom:20px">
+  <div class="col-sm-12">
+    <ul class="nav nav-tabs">
+      {{#active-link}}{{link-to "Settings" "sites.site.index" model.item.id}}{{/active-link}}
+      {{#active-link}}{{link-to "Groups" "sites.site.groups" model.item.id}}{{/active-link}}
+      {{#active-link}}{{link-to "Capabilities" "sites.site.capabilities" model.item.id}}{{/active-link}}
+    </ul>
+  </div>
+</div>
+<div class="row">
+  {{model.item.id}}
+  {{outlet}}
+</div>

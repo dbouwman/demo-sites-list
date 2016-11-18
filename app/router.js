@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('sites', function() {
+    this.route('legacy');
+    this.route('site', {path:'/:id'}, function() {
+      this.route('settings');
+      this.route('groups');
+      this.route('capabilities');
+    });
+  });
+
+  this.route('signin');
 });
 
 export default Router;

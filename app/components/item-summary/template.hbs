@@ -1,0 +1,10 @@
+{{link-to model.title "sites.site" model.id class="result-name"}}
+
+<br>
+Owned By: {{model.owner }}
+<br>
+{{#if model.description }}
+  <div class="desc-blurb">{{model.description }}</div>
+{{else}}
+  <div class="desc-blurb">No Description</div>
+{{/if}}

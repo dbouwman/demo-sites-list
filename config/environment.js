@@ -16,6 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'arcgis-oauth-bearer': {
+          apiKey: 'FP2kfibWc6uHdP7S', //QA
+          portalUrl: 'https://qaext.arcgis.com'
+        }
+      }
     }
   };
 

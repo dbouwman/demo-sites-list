@@ -1,0 +1,33 @@
+<div class="row" style="padding-bottom:20px">
+  <div class="col-sm-12">
+    <h3>Sites Manager</h3>
+    {{link-to "Create New Site" "sites.index" class="btn btn-primary pull-right"}}
+    {{link-to "Legacy Sites" "sites.legacy" class="btn btn-default pull-right"}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="input-group">
+      {{input value=q class="form-control" placeholder="Search"}}
+      <span class="input-group-btn">
+        <button class="btn btn-default" {{action 'filter'}} ><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+  </div><!-- /input-group -->
+  </div>
+  <div class="col-xs-12 col-sm-9">
+
+    {{#if totalCount}}
+    Found {{model.total}} items
+    <ul id="search-results">
+      {{#each model.results as |item|}}
+      <li class="col-sm-12">
+        {{item-summary model=item}}
+      </li>
+      {{/each}}
+    </ul>
+    {{item-list-pager model=model}}
+    {{else}}
+      No Results Found.
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,38 @@
+#search-results {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 0;
+  margin: 0;
+}
+#search-results  li {
+  width: 100%;
+  margin-bottom:35px;
+}
+
+.item-summary   span i {
+  color: #4C4C4C;
+}
+.item-summary  .desc-blurb {
+  max-height: 65px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 21px;
+}
+.item-summary .result-name {
+  font-weight: 500;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 650px;
+  display: inline-block;
+}
+.item-summary img {
+  width: 100px;
+  height: 70px;
+  float: right;
+  border: 1px solid #ccc;
+  padding: 4px;
+  margin: 30px auto auto 15px;
+}
